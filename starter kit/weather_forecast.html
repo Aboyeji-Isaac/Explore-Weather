@@ -80,6 +80,19 @@
 			font-size: 0.8125rem;
 		}
 
+		nav .search-icon {
+			display: flex;
+			width: 400px;
+			background-color: #ECEFF1;
+			padding: 10px;
+			border-radius: 50px;
+		}
+
+		nav .search-icon .search-btn{
+			padding-left: 10px;
+
+		}
+
 		#page-title {
 			width: 100%;
 			margin: 0 auto;
@@ -99,9 +112,10 @@
 
 		#hero .accordion {
 			margin-left: 5%;
-			padding-left: 20rem;
-			padding-right: 20px;
-			width: 90%;
+			/* margin-left: 5%; */
+			padding-left: 55rem;
+			/* padding-right: 10rem; */
+			width: 80%;
 			display: flex;
 			gap: 1rem;
 			justify-content: center;
@@ -109,6 +123,7 @@
 			white-space: nowrap;
 			scrollbar-width: thin;
 			overflow-x: auto;
+			box-sizing: border-box;
 		}
 		
 		#hero::before {
@@ -133,32 +148,74 @@
 			margin: 0;
 		}
 
-		.cloudy {
-			background: var(--color-cloudy) url(/images/cloudy@c.png);
+		/* .cloudy {
+			background: var(--color-cloudy);
+			position: relative;
+			overflow: hidden;
+		} */
+
+		.cloudy video{
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			z-index: -1;
 		}
 
 		.cloudy .readings li {
 			background-color: var(--color-cloudy-shade);
 		}
 
-		.sunny {
+		/* .sunny {
 			background: var(--color-sunny) url(images/sunny@c.png);
+		} */
+
+		.sunny video{
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			z-index: -1;
 		}
 
 		.sunny .readings li {
 			background-color: var(--color-sunny-shade);
 		}
 
-		.rainy {
+		/* .rainy {
 			background: var(--color-rainy) url(images/rainy@c.png);
+		} */
+
+		.rainy video{
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			z-index: -1;
 		}
 
 		.rainy .readings li {
 			background-color: var(--color-rainy-shade);
 		}
 
-		.thunderstorms {
+		/* .thunderstorms {
 			background: var(--color-thunderstorms) url(images/thunderstorms@c.png);
+		} */
+
+		.thunderstorms video{
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			z-index: -1;
 		}
 
 		.thunderstorms .readings li {
@@ -261,7 +318,7 @@
 		}
 
 		.opened {
-			background-size: 32rem;
+			background-size: 36rem;
 			flex-basis: 32rem;
 			cursor: auto;
 		}
@@ -272,7 +329,7 @@
 
 		.opened .temp,
 		.opened .readings {
-			opacity: 1;
+			opacity: 1;	
 		}
 
 		.opened .bottom-temp {
@@ -321,6 +378,12 @@
 				<a href="/"><img src="images/logo-nomad.svg" alt="Logo"></a>
 				<nav>
 					<ul>
+						<li><div class="search-icon">
+							<a href="#"><svg xmlns="http://www.w3.org/2000/svg" class="search-btn" width="2rem" height="2rem" viewBox="0 0 2048 2048">
+								<path fill="#222d38" d="M1344 0q97 0 187 25t168 71t142 110t111 143t71 168t25 187q0 97-25 187t-71 168t-110 142t-143 111t-168 71t-187 25q-125 0-239-42t-211-121l-785 784q-19 19-45 19t-45-19t-19-45t19-45l784-785q-79-96-121-210t-42-240q0-97 25-187t71-168t110-142T989 96t168-71t187-25m0 1280q119 0 224-45t183-124t123-183t46-224q0-119-45-224t-124-183t-183-123t-224-46q-119 0-224 45T937 297T814 480t-46 224q0 119 45 224t124 183t183 123t224 46"/>
+							</svg>
+							</a>
+						</div></li>
 						<li><a href="exercise-8.html">Destinations</a></li>
 						<li><a href="#">Travel Styles</a></li>
 						<li><a href="#">Stories</a></li>
@@ -337,6 +400,10 @@
 
 		<ul class="accordion">
 			<li class="accordion--item cloudy opened">
+				<div class="wvideo">
+					<video autoplay loop muted playsinline>
+						<source src="videos/video-2@c.mp4" type="video/mp4">
+				</div>
 				<ul class="date">
 					<li>Mon</li>
 					<li>12 Apr</li>
@@ -371,6 +438,10 @@
 				</ul>
 			</li>
 			<li class="accordion--item sunny">
+				<div class="wvideo">
+					<video autoplay loop muted playsinline>
+						<source src="videos/video-2@c.mp4" type="video/mp4">
+				</div>
 				<ul class="date">
 					<li>Tue</li>
 					<li>13 Apr</li>
@@ -405,6 +476,10 @@
 				</ul>
 			</li>
 			<li class="accordion--item rainy">
+				<div class="wvideo">
+					<video autoplay loop muted playsinline>
+						<source src="videos/video-2@c.mp4" type="video/mp4">
+				</div>
 				<ul class="date">
 					<li>Wed</li>
 					<li>14 Apr</li>
@@ -439,6 +514,10 @@
 				</ul>
 			</li>
 			<li class="accordion--item thunderstorms">
+				<div class="wvideo">
+					<video autoplay loop muted playsinline>
+						<source src="videos/video-2@c.mp4" type="video/mp4">
+				</div>
 				<ul class="date">
 					<li>Thu</li>
 					<li>15 Apr</li>
@@ -473,6 +552,10 @@
 				</ul>
 			</li>
 			<li class="accordion--item sunny">
+				<div class="wvideo">
+					<video autoplay loop muted playsinline>
+						<source src="videos/video-2@c.mp4" type="video/mp4">
+				</div>
 				<ul class="date">
 					<li>Fri</li>
 					<li>16 Apr</li>
@@ -507,6 +590,10 @@
 				</ul>
 			</li>
 			<li class="accordion--item sunny">
+				<div class="wvideo">
+					<video autoplay loop muted playsinline>
+						<source src="videos/video-2@c.mp4" type="video/mp4">
+				</div>
 				<ul class="date">
 					<li>Sat</li>
 					<li>16 Apr</li>
@@ -541,6 +628,10 @@
 				</ul>
 			</li>
 			<li class="accordion--item sunny">
+				<div class="wvideo">
+					<video autoplay loop muted playsinline>
+						<source src="videos/video-2@c.mp4" type="video/mp4">
+				</div>
 				<ul class="date">
 					<li>Sun</li>
 					<li>16 Apr</li>
@@ -619,5 +710,6 @@ accordion.addEventListener('scroll', updateButtons);
 updateButtons();
 
 	</script>
+	<script src="weather.js"></script>
 </body>
 </html>
